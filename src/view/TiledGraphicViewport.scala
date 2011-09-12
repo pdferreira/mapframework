@@ -14,13 +14,13 @@ class TiledGraphicViewport[T](tgv: TiledGraphicView[T]) extends Component with C
 	def width: Int = _width
 	def width_=(w: Int) {
 		_width = w
-		refreshPreferredSize(width = w * tgv.tileWidth)
+//		refreshPreferredSize(width = w * tgv.tileWidth)
 	}
 	
 	def height: Int = _height
 	def height_=(h: Int) {
 		_height = h
-		refreshPreferredSize(height = h * tgv.tileHeight)
+//		refreshPreferredSize(height = h * tgv.tileHeight)
 	}
 	
 	def centerAt(col: Int, row: Int) {
@@ -48,7 +48,8 @@ class TiledGraphicViewport[T](tgv: TiledGraphicView[T]) extends Component with C
 			val col = drawCol + leftmostX
 			val row = drawRow + topmostY
 			for (tile <- tgv.model(col, row))
-				tgv.drawTileAt(g, tile, drawCol * tgv.tileWidth, drawRow * tgv.tileHeight)
+//				tgv.drawTileAt(g, tile, drawCol * tgv.tileWidth, drawRow * tgv.tileHeight)
+			  println();
 		}
 	}
 	
